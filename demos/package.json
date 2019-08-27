@@ -1,8 +1,0 @@
-{
-  "name": "trump-img demos",
-  "version": "1.0.0",
-  "license": "MIT",
-  "dependencies": {
-    "elix": "6.0.5"
-  }
-}
