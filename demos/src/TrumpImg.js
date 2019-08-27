@@ -34,6 +34,11 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
           width: 100%;
           height: 100%;
         }
+
+        p {
+          margin-top: .9 em;
+          font-size: small;
+        }
       </style>
       <div id="container">
         <img id="inner" alt="${TrumpImg.caption}" title="${TrumpImg.caption}" />
