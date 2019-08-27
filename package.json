@@ -1,0 +1,21 @@
+{
+  "name": "trump-img",
+  "version": "1.0.0",
+  "description": "Image tag subclass for displaying images of Donald Trump",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/robbear/trump-img.git"
+  },
+  "author": "robbear@hyperfine.com",
+  "keywords": [
+    "web components",
+    "img",
+    "Donald Trump",
+    "Trump",
+    "Liar"
+  ],
+  "dependencies": {
+    "elix": "6.0.5"
+  }
+}

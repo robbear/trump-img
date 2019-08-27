@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TrumpImg demo</title>
+
+  <link rel="stylesheet" href="demos.css">
+  <script type="module" src="./src/TrumpImg.js"></script>
+
+  <script>
+    function handleClick(src) {
+      var element = document.getElementById('image');
+      element.src = src;
+    }
+  </script>
+
+</head>
+
+<body role="main">
+  <div class="demo padded">
+
+    <h1>&lt;trump-img&gt;</h1>
+    <p>
+      The <b>&lt;trump-img&gt;</b> tag replaces the standard <b>&lt;img&gt;</b> tag for use in
+      displaying photographs of Donald Trump. This helpful web component uses
+      sophisticated AI modeling, trained on decades of news articles, photographs,
+      television broadcasts, commentary, public statements, court documents, and 
+      the entirety of his Twitter emissions in order to automatically detect what
+      Trump is doing in any photograph used as the <b><i>src</i></b> url. The <b>&lt;trump-img&gt;</b>
+      tag displays a caption and sets the <b><i>alt</i></b> and <b><i>title</i></b> attributes automatically.
+      This open source project is intended to save news organizations and publishers
+      millions of dollars in copyrighting costs.
+    </p>
+
+    <p>
+      Example usage:
+    </p>
+    <p style="margin-bottom: 40px;">
+      <code>
+        &lt;trump-img src="./images/trump-doing-anything.jpg"/&gt;
+      </code>
+    </p>
+
+    <trump-img id="image" src="https://media.irishpost.co.uk/uploads/2019/06/04114615/Donald-Trump-Irish-Post-1.jpg"></trump-img>
+
+    <p style="margin-top: 40px">
+      Try it! Click on any of the test images below in order to change the image displayed above and
+      see the algorithm at work. The caption under the image,
+      the alt attribute, and the title attribute will all reflect what Donald Trump is doing in the contained
+      photo url.
+    </p>
+
+    <p style="margin: 20px 0">
+      <style>
+        li { cursor: pointer; font-style: italic;}
+      </style>
+      <ul>
+        <li onclick="handleClick('https://media.irishpost.co.uk/uploads/2019/06/04114615/Donald-Trump-Irish-Post-1.jpg')">Sample Trump image</li>
+        <li onclick="handleClick('https://ei.marketwatch.com/Multimedia/2019/08/26/Photos/ZH/MW-HQ143_trump__20190826125818_ZH.jpg?uuid=b3c8e504-c822-11e9-9564-9c8e992d421e')">Another sample Trump image</li>
+        <li onclick="handleClick('https://images.axios.com/35zkqqrHWC9dJZBXti2g-xHSNy4=/0x71:4291x2485/1366x768/2019/01/05/1546707506731.jpg')">A really difficult to determine what he's doing Trump image</li>
+      </ul>
+    </p>
+
+    <p>
+      Images courtesy of <a href="https://www.irishpost.com/news/president-donald-trump-ireland-uk-170525">The Irish Post</a>,
+      <a href="https://www.marketwatch.com/story/why-some-stock-market-investors-fear-the-trump-put-has-expired-2019-08-26">MarketWatch</a>,
+      and <a href="https://www.axios.com/everything-trump-says-he-knows-more-about-than-anybody-b278b592-cff0-47dc-a75f-5767f42bcf1e.html">Axios</a>.
+    </p>
+
+  </div>
+</body>
+
+</html>
