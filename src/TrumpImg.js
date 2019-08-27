@@ -36,8 +36,8 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
         }
 
         p {
-          margin-top: .9 em;
-          font-size: small;
+          margin-top: .75 em;
+          font-size: smaller;
         }
       </style>
       <div id="container">
