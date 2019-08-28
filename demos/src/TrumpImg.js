@@ -25,7 +25,7 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
   }
 
   static get placeholderText() {
-    return 'AI analyzing photo...';
+    return 'Analyzing photo with AI engine...';
   }
 
   get defaultState() {
