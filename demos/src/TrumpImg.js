@@ -40,7 +40,6 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
     return this.state.src;
   }
   set src(src) {
-    console.log('src setter');
     this.setState({src});
   }
 
@@ -71,7 +70,6 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
     super[symbols.render](changed);
 
     if (changed.src) {
-      console.log('In changed.src');
       this.$.inner.src = this.src;
       this.$.caption.textContent = TrumpImg.placeholderText;
       setTimeout(() => {
