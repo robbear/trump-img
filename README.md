@@ -10,5 +10,5 @@ in order to automatically detect and caption what Trump is doing in any
 photograph specified by the element's `src` attribute. The `trump-img`
 tag displays a caption and sets the `alt` and `title` attributes automatically.
 This open source project is intended to save news organizations and publishers
-millions of dollars in analysis and copyrighting costs.
+millions of dollars in analysis and copy writing costs.
  
