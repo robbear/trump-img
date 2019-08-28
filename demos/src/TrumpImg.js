@@ -24,6 +24,26 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
     return 'Donald Trump, lying.';
   }
 
+  static get placeholderText() {
+    return 'AI analyzing photo...';
+  }
+
+  get defaultState() {
+    const state = Object.assign(super.defaultState, {
+      src: null
+    });
+
+    return state;
+  }
+
+  get src() {
+    return this.state.src;
+  }
+  set src(src) {
+    console.log('src setter');
+    this.setState({src});
+  }
+
   get [symbols.template]() {
     return template.html`
       <style>
@@ -42,11 +62,22 @@ class TrumpImg extends WrappedStandardElement.wrap('img') {
       </style>
       <div id="container">
         <img id="inner" alt="${TrumpImg.caption}" title="${TrumpImg.caption}" />
-        <p id="caption">
-          ${TrumpImg.caption}
-        </p>
+        <p id="caption"></p>
       </div>
     `;
+  }
+
+  [symbols.render](changed) {
+    super[symbols.render](changed);
+
+    if (changed.src) {
+      console.log('In changed.src');
+      this.$.inner.src = this.src;
+      this.$.caption.textContent = TrumpImg.placeholderText;
+      setTimeout(() => {
+        this.$.caption.textContent = TrumpImg.caption;
+      }, 2000);
+    }
   }
 }
 
